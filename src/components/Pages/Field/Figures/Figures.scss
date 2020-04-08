@@ -1,0 +1,23 @@
+.figures {
+  position: absolute;
+  bottom: 0;
+  left: -35px;
+  display: flex;
+  flex-direction: column;
+  li{
+    border-top: none;
+    border-left: none;
+    &:nth-child(1){
+      border-top: 1px solid #000;
+    }
+    &:nth-last-child(1){
+      border-bottom: 1px solid #000;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .figures {
+    left: -25px;
+  }
+}

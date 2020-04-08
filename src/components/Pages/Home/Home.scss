@@ -1,0 +1,40 @@
+.playing-field {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  > div {
+    width: 43%;
+  }
+}
+
+.field-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 20px;
+  .btn-main {
+    position: absolute;
+    right: 0;
+    top: -4px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .playing-field {
+    flex-direction: column;
+    align-items: center;
+    > div {
+      width: calc(100% - 45px);
+    }
+  }
+}
+
+@media only screen and (max-width: 562px) {
+  .who-walks {
+    text-align: left;
+  }
+}

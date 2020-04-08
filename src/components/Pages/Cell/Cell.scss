@@ -1,0 +1,79 @@
+.cell{
+    background-color: #e5e5e5;
+    height: 35px;
+    width: 35px;
+    font-size: 25px;
+    border: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty:hover{
+    opacity: .5;
+}
+
+.for-miss{
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 50%;
+    display: none;
+}
+
+.miss{
+    .for-miss{
+        display: inline-block;
+    }
+}
+
+.ship{
+    background-color: #1620af;
+}
+
+.hit {
+    position: relative;
+    &:before{
+        content: '';
+        width: 40px;
+        height: 2px;
+        background-color: #af0d08;
+        position: absolute;
+        left: -3px;
+        top: 16px;
+        transform: rotate(45deg);
+    }
+    &:after{
+        content: '';
+        width: 40px;
+        height: 2px;
+        background-color: #af0d08;
+        position: absolute;
+        right: -3px;
+        top: 16px;
+        transform: rotate(-45deg);
+    }
+}
+
+.kill {
+    background-color: #af0d08;
+}
+
+@media only screen and (max-width: 992px) {
+    .cell{
+        height: 25px;
+        width: 25px;
+    }
+    .hit:before {
+        width: 25px;
+        left: -1px;
+        top: 10px;
+    }
+    .hit:after {
+        width: 25px;
+        right: 0;
+        top: 10px;
+    }
+}

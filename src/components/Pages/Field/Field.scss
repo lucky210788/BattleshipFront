@@ -1,0 +1,19 @@
+.field-wrap{
+    text-align: center;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px auto 20px;
+    position: relative;
+}
+
+.text-field{
+    text-align: center;
+    font: 700 20px Arial;
+}
+
+@media only screen and (max-width: 992px) {
+    .field-wrap {
+        width: 250px;
+    }
+}

@@ -1,0 +1,90 @@
+.block-rules-game {
+  margin-right: 100px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    > p {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.ship-example {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.ship-wrap {
+  border: 2px solid #000;
+  min-width: 30px;
+  min-height: 30px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 28px;
+  .line {
+    margin: 0 28px 0 0;
+    height: 26px;
+    width: 1.4px;
+    background-color: #000;
+  }
+}
+
+.ship-placement {
+  &-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .ship-wrap {
+      min-width: 20px;
+      min-height: 20px;
+      padding-left: 16px;
+    }
+  }
+  &-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .ship-wrap {
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+      &:nth-last-child(1) {
+        margin-left: 19px;
+      }
+    }
+  }
+  &-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 20px;
+    .ship-wrap {
+      min-width: 40px;
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+      &:nth-last-child(1) {
+        margin-left: 18px;
+      }
+    }
+  }
+  &-3 {
+    display: flex;
+    .ship-wrap {
+      margin-left: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .block-rules-game {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}

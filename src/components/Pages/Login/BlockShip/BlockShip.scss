@@ -1,0 +1,59 @@
+.block-ship {
+  width: 100%;
+  max-width: 515px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 auto 5px;
+  >div{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .error-text {
+    font-size: 10px;
+    color: #ff0000;
+    margin-top: 5px;
+  }
+  &-name {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-right: 10px;
+    min-width: 260px;
+    text-align: left;
+  }
+  &-coordinate {
+    font-size: 12px;
+    width: 32px;
+    height: 24px;
+    padding: 0 3px;
+    margin: 0 2px;
+  }
+}
+
+.block-coordinates{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 567px) {
+  .block-coordinates {
+    margin-top: 10px;
+    align-items: center;
+  }
+  .block-ship {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    &-name {
+      min-width: 100%;
+      text-align: center;
+    }
+    > div {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+  }
+}
